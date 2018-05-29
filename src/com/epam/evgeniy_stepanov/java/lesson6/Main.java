@@ -36,7 +36,7 @@ public class Main {
                 System.out.println("Not correct operation!");
             }
         }
-   }
+    }
 
     private String parseCounty(String country) throws CountryException {
         if (country.isEmpty()) {
@@ -53,14 +53,14 @@ public class Main {
     }
 
     private ElectricalAppliance getElectricalApplianceByParams(ArrayList<ElectricalAppliance> setOfHouseholdElectricalAppliances, int minPower, int maxPower){
-       for (ElectricalAppliance appiliance: setOfHouseholdElectricalAppliances) {
-           if (appiliance.getPower() >= minPower && appiliance.getPower() <= maxPower) {
-               return appiliance;
-           }
-       }
+        for (ElectricalAppliance appiliance: setOfHouseholdElectricalAppliances) {
+            if (appiliance.getPower() >= minPower && appiliance.getPower() <= maxPower) {
+                return appiliance;
+            }
+        }
 
-       return  null;
-   }
+        return  null;
+    }
 
     private ArrayList<ElectricalAppliance> getByCountry(ArrayList<ElectricalAppliance> setOfHouseholdElectricalAppliances, String country){
         ArrayList <ElectricalAppliance> electricalApplianceByCountry = new ArrayList<>();
@@ -75,13 +75,13 @@ public class Main {
 
     private int countGeneralPower(ArrayList<ElectricalAppliance> setOfHouseholdElectricalAppliances){
         int generalPower = 0;
-       for (ElectricalAppliance appiliance: setOfHouseholdElectricalAppliances) {
+        for (ElectricalAppliance appiliance: setOfHouseholdElectricalAppliances) {
 
-           if (appiliance.isState())
-               generalPower += appiliance.getPower();
-       }
+            if (appiliance.isState())
+                generalPower += appiliance.getPower();
+        }
         return  generalPower;
-   }
+    }
 
     private ArrayList<ElectricalAppliance> createElectricalAppliances() {
         ArrayList<ElectricalAppliance> setOfHouseholdElectricalAppliances = new ArrayList<>();
