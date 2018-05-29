@@ -17,7 +17,7 @@ public class Main {
 
     public void run() throws IOException, ParserConfigurationException {
         ArrayList<ElectricalAppliance> setOfHouseholdElectricalAppliances = new ArrayList<>();
-        ElectricalAppliance bosh = new Kettle(true, "Kettle", "UK", "red", "kitchen", 2400);
+        ElectricalAppliance bosh = new Kettle(true, "Kettle", "UK", "green", "kitchen", 2400);
         setOfHouseholdElectricalAppliances.add(bosh);
 
         ElectricalAppliance supra = new Microwave(false, "Microwave", "USA", "black", "kitchen", 3250);
