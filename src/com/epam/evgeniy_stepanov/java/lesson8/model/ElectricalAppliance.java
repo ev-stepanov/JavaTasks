@@ -1,23 +1,19 @@
-package com.epam.evgeniy_stepanov.java.lesson6.model;
+package com.epam.evgeniy_stepanov.java.lesson8.model;
 
-import com.epam.evgeniy_stepanov.java.lesson6.interfaces.IElectricalAppliance;
-import java.io.Serializable;
+import com.epam.evgeniy_stepanov.java.lesson8.interfaces.IElectricalAppliance;
 
-public abstract class ElectricalAppliance implements IElectricalAppliance, Serializable {
+public abstract class ElectricalAppliance implements IElectricalAppliance {
     boolean state;
     String name, origin, color, locationOfTheApartment;
-    int power, length, width, height;
+    int power;
 
-    public ElectricalAppliance(boolean state, String name, String origin, String color, String locationOfTheApartment, int power, int length, int width, int height) {
+    public ElectricalAppliance(boolean state, String name, String origin, String color, String locationOfTheApartment, int power) {
         this.state = state;
         this.name = name;
         this.origin = origin;
         this.color = color;
         this.locationOfTheApartment = locationOfTheApartment;
         this.power = power;
-        this.length = length;
-        this.width = width;
-        this.height = height;
     }
 
     @Override
@@ -29,9 +25,6 @@ public abstract class ElectricalAppliance implements IElectricalAppliance, Seria
                 ", color='" + color + '\'' +
                 ", locationOfTheApartment='" + locationOfTheApartment + '\'' +
                 ", power=" + power +
-                ", length=" + length +
-                ", width=" + width +
-                ", height=" + height +
                 '}';
     }
 
@@ -81,30 +74,6 @@ public abstract class ElectricalAppliance implements IElectricalAppliance, Seria
 
     public void setPower(int power) {
         this.power = power;
-    }
-
-    public int getLength() {
-        return length;
-    }
-
-    public void setLength(int length) {
-        this.length = length;
-    }
-
-    public int getWidth() {
-        return width;
-    }
-
-    public void setWidth(int width) {
-        this.width = width;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
-    public void setHeight(int height) {
-        this.height = height;
     }
 
     @Override
